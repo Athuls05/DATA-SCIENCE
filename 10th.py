@@ -1,0 +1,6 @@
+import requests
+from bs4 import BeautifulSoup
+url="https://www.google.com/search?q=www.google.com&ei=7Fa0Y4e6HcPp4-EP9O-ZYA&oq=www.&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgCMgsIABCxAxCDARCRAjILCAAQsQMQgwEQkQIyCwgAEIAEELEDEIMBMggIABCxAxCDATIICAAQsQMQgwEyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATIRCC4QgwEQxwEQsQMQ0QMQgAQyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDAToFCC4QgAQ6BQgAEIAEOgQIABBDOgsILhCABBCxAxCDAToKCAAQsQMQgwEQQ0oECEEYAEoECEYYAFDzDFicEWDbIWgBcAF4AIABdIgBnQOSAQMyLjKYAQCgAQGwAQDAAQE&sclient=gws-wiz-serp"
+r=requests.get(url)
+soup=BeautifulSoup(r.content,'html.parser')
+print(soup)
